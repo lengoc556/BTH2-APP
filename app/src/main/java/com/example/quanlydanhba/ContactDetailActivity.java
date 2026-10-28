@@ -44,18 +44,17 @@ public class ContactDetailActivity extends AppCompatActivity {
 
     private Contact contact;
     private int position = -1;
-    private boolean isInitialFavorite;
 
-    // Bảng màu avatar đồng bộ
+    // Bảng màu avatar đồng bộ hiện đại
     private static final int[] AVATAR_COLORS = {
-            Color.parseColor("#00897B"), // Teal
-            Color.parseColor("#1E88E5"), // Blue
-            Color.parseColor("#7C4DFF"), // Purple
-            Color.parseColor("#FB8C00"), // Orange
-            Color.parseColor("#E53935"), // Red
-            Color.parseColor("#43A047"), // Green
-            Color.parseColor("#D81B60"), // Pink
-            Color.parseColor("#3949AB")  // Indigo
+            Color.parseColor("#4F46E5"), // Royal Indigo
+            Color.parseColor("#7C3AED"), // Electric Violet
+            Color.parseColor("#F43F5E"), // Rose
+            Color.parseColor("#10B981"), // Emerald
+            Color.parseColor("#F59E0B"), // Amber
+            Color.parseColor("#06B6D4"), // Cyan
+            Color.parseColor("#2563EB"), // Blue
+            Color.parseColor("#0D9488")  // Teal
     };
 
     @Override
@@ -74,8 +73,6 @@ public class ContactDetailActivity extends AppCompatActivity {
             finish();
             return;
         }
-
-        isInitialFavorite = contact.isFavorite();
 
         initViews();
         displayContactData();
@@ -130,23 +127,12 @@ public class ContactDetailActivity extends AppCompatActivity {
     }
 
     private void setupListeners() {
-        // Nút mũi tên quay lại trên Toolbar
         btnBackDetail.setOnClickListener(v -> finishAndReturnResult());
-
-        // Nút Quay lại ở dưới
         btnBack.setOnClickListener(v -> finishAndReturnResult());
-
-        // Nút Gọi điện: sử dụng Intent ngầm định (ACTION_DIAL)
         btnCall.setOnClickListener(v -> makePhoneCall());
-
-        // Nút Xóa liên hệ
         btnDeleteContact.setOnClickListener(v -> confirmDeleteContact());
     }
 
-    /**
-     * Dùng Intent ngầm định (ACTION_DIAL) để mở ứng dụng gọi điện của hệ thống
-     * với số điện thoại đã được điền sẵn.
-     */
     private void makePhoneCall() {
         String phoneNumber = contact.getPhone();
         if (TextUtils.isEmpty(phoneNumber)) {
@@ -159,15 +145,11 @@ public class ContactDetailActivity extends AppCompatActivity {
         startActivity(dialIntent);
     }
 
-    /**
-     * Hiển thị hộp thoại xác nhận trước khi xóa liên hệ
-     */
     private void confirmDeleteContact() {
         new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.dialog_delete_title))
                 .setMessage(getString(R.string.dialog_delete_message, contact.getFullName()))
                 .setPositiveButton(getString(R.string.dialog_btn_delete), (dialog, which) -> {
-                    // Trả kết quả xóa về MainActivity
                     Intent resultIntent = new Intent();
                     resultIntent.putExtra(EXTRA_DELETE_CONTACT, true);
                     resultIntent.putExtra(EXTRA_POSITION, position);
@@ -179,9 +161,6 @@ public class ContactDetailActivity extends AppCompatActivity {
                 .show();
     }
 
-    /**
-     * Đóng màn hình và trả kết quả cập nhật yêu thích (nếu có thay đổi)
-     */
     private void finishAndReturnResult() {
         boolean currentFavorite = cbDetailFavorite.isChecked();
         contact.setFavorite(currentFavorite);

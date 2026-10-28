@@ -1,17 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme: Modern Material DayNight NoActionBar -->
     <style name="Theme.QuanLyDanhBa" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary_teal</item>
-        <item name="colorPrimaryVariant">@color/primary_teal_dark</item>
+        <!-- Primary brand color (Royal Indigo) -->
+        <item name="colorPrimary">@color/primary_brand</item>
+        <item name="colorPrimaryVariant">@color/primary_brand_dark</item>
         <item name="colorOnPrimary">@color/text_white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/primary_teal_medium</item>
-        <item name="colorSecondaryVariant">@color/primary_teal_dark</item>
+
+        <!-- Secondary brand color (Purple accent) -->
+        <item name="colorSecondary">@color/purple_600</item>
+        <item name="colorSecondaryVariant">@color/primary_brand_dark</item>
         <item name="colorOnSecondary">@color/text_white</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/primary_teal_dark</item>
+
+        <!-- System bars -->
+        <item name="android:statusBarColor">@color/primary_brand_dark</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowBackground">@color/window_background</item>
     </style>
+
+    <!-- Alias for compatibility -->
+    <style name="Theme.MyApplication" parent="Theme.QuanLyDanhBa" />
 </resources>

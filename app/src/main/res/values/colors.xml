@@ -1,53 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Brand / Primary Colors -->
-    <color name="primary_teal">#00695C</color>
-    <color name="primary_teal_dark">#004D40</color>
-    <color name="primary_teal_medium">#00897B</color>
-    <color name="primary_teal_light">#E0F2F1</color>
-    <color name="teal_100">#B2DFDB</color>
-    <color name="teal_50">#E0F2F1</color>
+    <!-- Brand / Primary Colors (Royal Indigo & Electric Violet) -->
+    <color name="primary_brand">#4F46E5</color>
+    <color name="primary_brand_dark">#3730A3</color>
+    <color name="primary_brand_light">#EEF2FF</color>
+    <color name="primary_brand_gradient_start">#4F46E5</color>
+    <color name="primary_brand_gradient_end">#7C3AED</color>
+    <color name="indigo_600">#4F46E5</color>
+    <color name="indigo_700">#4338CA</color>
+    <color name="indigo_800">#3730A3</color>
+    <color name="purple_600">#7C3AED</color>
 
-    <!-- Accent / Action Colors -->
-    <color name="accent_orange">#FF7043</color>
+    <!-- Backward-compatible Aliases -->
+    <color name="primary_teal">#4F46E5</color>
+    <color name="primary_teal_dark">#3730A3</color>
+    <color name="primary_teal_medium">#6366F1</color>
+    <color name="primary_teal_light">#EEF2FF</color>
+    <color name="teal_100">#C7D2FE</color>
+    <color name="teal_50">#EEF2FF</color>
+
+    <!-- Standard Android Palette -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Accent & Action Colors -->
+    <color name="accent_coral">#F43F5E</color>
+    <color name="accent_orange">#F97316</color>
     <color name="gold_star">#F59E0B</color>
     <color name="gold_star_light">#FEF3C7</color>
-    <color name="call_green">#00796B</color>
-    <color name="call_green_pressed">#004D40</color>
-    <color name="delete_red">#D32F2F</color>
-    <color name="delete_red_pressed">#B71C1C</color>
+    <color name="call_green">#10B981</color>
+    <color name="call_green_pressed">#059669</color>
+    <color name="delete_red">#EF4444</color>
+    <color name="delete_red_pressed">#DC2626</color>
     <color name="delete_red_light">#FEE2E2</color>
 
     <!-- Neutrals & Backgrounds -->
-    <color name="window_background">#F4F7F6</color>
+    <color name="window_background">#F8FAFC</color>
     <color name="card_background">#FFFFFF</color>
     <color name="card_stroke">#E2E8F0</color>
-    <color name="divider">#ECEFF1</color>
+    <color name="divider">#F1F5F9</color>
 
     <!-- Typography -->
-    <color name="text_primary">#1E293B</color>
+    <color name="text_primary">#0F172A</color>
     <color name="text_secondary">#64748B</color>
     <color name="text_hint">#94A3B8</color>
     <color name="text_white">#FFFFFF</color>
-    <color name="text_error">#DC2626</color>
+    <color name="text_error">#EF4444</color>
 
-    <!-- Group Badges -->
-    <color name="group_family_bg">#FEE2E2</color>
-    <color name="group_family_text">#B91C1C</color>
-    <color name="group_friends_bg">#E0F2FE</color>
-    <color name="group_friends_text">#0369A1</color>
-    <color name="group_work_bg">#EDE9FE</color>
-    <color name="group_work_text">#6D28D9</color>
-    <color name="group_other_bg">#F1F5F9</color>
-    <color name="group_other_text">#475569</color>
+    <!-- Group Badges (Modern Soft Pastels) -->
+    <color name="group_family_bg">#FFE4E6</color>
+    <color name="group_family_text">#E11D48</color>
+    <color name="group_friends_bg">#ECFDF5</color>
+    <color name="group_friends_text">#059669</color>
+    <color name="group_work_bg">#EEF2FF</color>
+    <color name="group_work_text">#4F46E5</color>
+    <color name="group_other_bg">#FEF3C7</color>
+    <color name="group_other_text">#D97706</color>
 
-    <!-- Avatar Palette -->
-    <color name="avatar_teal">#00897B</color>
-    <color name="avatar_blue">#1E88E5</color>
-    <color name="avatar_purple">#7C4DFF</color>
-    <color name="avatar_orange">#FB8C00</color>
-    <color name="avatar_red">#E53935</color>
-    <color name="avatar_green">#43A047</color>
-    <color name="avatar_pink">#D81B60</color>
-    <color name="avatar_indigo">#3949AB</color>
+    <!-- Avatar Modern Gradient Palette -->
+    <color name="avatar_indigo">#4F46E5</color>
+    <color name="avatar_purple">#7C3AED</color>
+    <color name="avatar_rose">#F43F5E</color>
+    <color name="avatar_amber">#F59E0B</color>
+    <color name="avatar_emerald">#10B981</color>
+    <color name="avatar_cyan">#06B6D4</color>
+    <color name="avatar_blue">#2563EB</color>
+    <color name="avatar_teal">#0D9488</color>
 </resources>

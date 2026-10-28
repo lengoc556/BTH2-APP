@@ -11,29 +11,38 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Header Bar -->
-        <FrameLayout
+        <!-- Header Bar cao cấp (Royal Indigo) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/primary_teal"
-            android:elevation="4dp"
-            android:paddingStart="20dp"
-            android:paddingTop="20dp"
-            android:paddingEnd="20dp"
-            android:paddingBottom="18dp">
+            android:background="@color/primary_brand"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:paddingStart="22dp"
+            android:paddingTop="22dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="20dp">
 
             <TextView
                 android:id="@+id/tvHeaderTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:letterSpacing="0.01"
                 android:text="@string/contacts_title"
                 android:textColor="@color/text_white"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
-        </FrameLayout>
 
-        <!-- Khối Thống Kê (Statistics Card) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Hệ thống quản lý danh bạ thông minh"
+                android:textColor="#C7D2FE"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Khối Thống Kê Hiện Đại (Modern Dual-Card Frosted Glass) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +50,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/bg_stats_card"
-            android:elevation="3dp"
+            android:elevation="4dp"
             android:orientation="vertical"
             android:padding="18dp">
 
@@ -49,22 +58,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/stats_title"
-                android:textColor="#E0F2F1"
-                android:textSize="14sp"
+                android:textColor="#EEF2FF"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
+            <!-- Hai thẻ thống kê kính mờ (Frosted glass cards) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal">
 
-                <!-- Thống kê Tổng liên hệ -->
+                <!-- Thẻ 1: Tổng liên hệ -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/bg_glass_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
                     <TextView
                         android:id="@+id/tvTotalContactsCount"
@@ -78,44 +91,57 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/stats_total_contacts"
-                        android:textColor="#B2DFDB"
-                        android:textSize="13sp" />
+                        android:textColor="#E0E7FF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="#33FFFFFF" />
-
-                <!-- Thống kê Yêu thích -->
+                <!-- Thẻ 2: Yêu thích -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/bg_glass_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
-                    <TextView
-                        android:id="@+id/tvFavoriteContactsCount"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/text_white"
-                        android:textSize="32sp"
-                        android:textStyle="bold"
-                        tools:text="1" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFavoriteContactsCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            tools:text="1" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="6dp"
+                            android:contentDescription="@string/stats_favorite_contacts"
+                            android:src="@drawable/ic_star_filled"
+                            app:tint="@color/gold_star" />
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/stats_favorite_contacts"
-                        android:textColor="#B2DFDB"
-                        android:textSize="13sp" />
+                        android:textColor="#E0E7FF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
 
@@ -126,7 +152,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -135,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/contact_list_header"
                 android:textColor="@color/text_primary"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -147,54 +173,45 @@
                 android:gravity="end"
                 android:text="@string/contact_item_hint"
                 android:textColor="@color/text_secondary"
-                android:textSize="11sp"
-                android:fontFamily="sans-serif-light" />
+                android:textSize="11sp" />
         </LinearLayout>
 
-        <!-- Search box thanh lịch -->
-        <com.google.android.material.card.MaterialCardView
+        <!-- Thanh tìm kiếm hiện đại dạng viên nang (Pill Search Bar) -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            app:cardBackgroundColor="@color/card_background"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="1dp"
-            app:strokeColor="@color/card_stroke"
-            app:strokeWidth="1dp">
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_pill_search"
+            android:elevation="1dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
 
-            <LinearLayout
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/search_hint"
+                android:src="@drawable/ic_search"
+                app:tint="@color/text_secondary" />
+
+            <EditText
+                android:id="@+id/etSearchContact"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp">
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@null"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:contentDescription="@string/search_hint"
-                    android:src="@drawable/ic_search"
-                    app:tint="@color/text_hint" />
-
-                <EditText
-                    android:id="@+id/etSearchContact"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:background="@null"
-                    android:hint="@string/search_hint"
-                    android:imeOptions="actionSearch"
-                    android:inputType="text"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_hint"
-                    android:textSize="14sp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Container danh sách và Empty State -->
+        <!-- Danh sách liên hệ & Empty State -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -206,10 +223,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
-                android:paddingBottom="84dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="90dp"
                 tools:listitem="@layout/item_contact" />
 
-            <!-- Empty State khi không có liên hệ -->
+            <!-- Empty State nếu danh sách rỗng -->
             <LinearLayout
                 android:id="@+id/layoutEmptyState"
                 android:layout_width="wrap_content"
@@ -222,32 +240,33 @@
                 tools:visibility="gone">
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:alpha="0.4"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:alpha="0.3"
                     android:contentDescription="@string/empty_contacts_message"
                     android:src="@drawable/ic_person"
-                    app:tint="@color/text_secondary" />
+                    app:tint="@color/primary_brand" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="14dp"
                     android:text="@string/empty_contacts_message"
                     android:textColor="@color/text_secondary"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </FrameLayout>
 
     </LinearLayout>
 
-    <!-- Nút "Thêm liên hệ" nổi bật ở dưới màn hình -->
+    <!-- Nút "Thêm liên hệ" nổi bật ở dưới màn hình (Pill Floating Button) -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#E6F4F7F6"
+        android:background="#DDF8FAFC"
         android:paddingStart="20dp"
         android:paddingTop="12dp"
         android:paddingEnd="20dp"
@@ -256,15 +275,15 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAddContact"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:backgroundTint="@color/primary_teal"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/primary_brand"
             android:elevation="6dp"
             android:text="@string/btn_add_contact"
             android:textAllCaps="false"
             android:textColor="@color/text_white"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:cornerRadius="27dp"
+            app:cornerRadius="28dp"
             app:icon="@drawable/ic_add"
             app:iconGravity="textStart"
             app:iconPadding="8dp"

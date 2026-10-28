@@ -13,35 +13,36 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingStart="28dp"
-        android:paddingTop="56dp"
+        android:paddingTop="52dp"
         android:paddingEnd="28dp"
         android:paddingBottom="36dp">
 
-        <!-- Logo Icon tròn -->
+        <!-- Logo Icon tròn hiệu ứng Gradient Indigo-Purple -->
         <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="24dp"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginBottom="22dp"
             android:background="@drawable/bg_circle_logo"
-            android:elevation="6dp">
+            android:elevation="8dp">
 
             <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
                 android:layout_gravity="center"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_phone"
                 app:tint="@color/text_white" />
         </FrameLayout>
 
-        <!-- Tiêu đề & phụ đề -->
+        <!-- Tiêu đề & phụ đề ứng dụng -->
         <TextView
             android:id="@+id/tvAppTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
             android:text="@string/login_title"
             android:textColor="@color/text_primary"
-            android:textSize="30sp"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
         <TextView
@@ -49,19 +50,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="30dp"
             android:text="@string/login_subtitle"
             android:textColor="@color/text_secondary"
             android:textSize="15sp" />
 
-        <!-- Card chứa form đăng nhập -->
+        <!-- Card chứa form đăng nhập phong cách hiện đại -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="24dp"
             app:cardBackgroundColor="@color/card_background"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="3dp"
             app:strokeColor="@color/card_stroke"
             app:strokeWidth="1dp">
 
@@ -69,33 +70,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
-                <!-- Nhãn Tên đăng nhập -->
+                <!-- 1. Nhãn & Ô nhập Tên đăng nhập -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/username_label"
                     android:textColor="@color/text_primary"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <!-- Ô nhập Tên đăng nhập -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilUsername"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    app:boxCornerRadiusBottomEnd="12dp"
-                    app:boxCornerRadiusBottomStart="12dp"
-                    app:boxCornerRadiusTopEnd="12dp"
-                    app:boxCornerRadiusTopStart="12dp"
-                    app:boxStrokeColor="@color/primary_teal"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxStrokeColor="@color/primary_brand"
                     app:hintEnabled="false"
                     app:startIconDrawable="@drawable/ic_person"
-                    app:startIconTint="@color/primary_teal">
+                    app:startIconTint="@color/primary_brand">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etUsername"
@@ -103,37 +103,36 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/username_hint"
                         android:inputType="text"
-                        android:paddingTop="14dp"
-                        android:paddingBottom="14dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
                         android:textColor="@color/text_primary"
                         android:textSize="15sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Nhãn Mật khẩu -->
+                <!-- 2. Nhãn & Ô nhập Mật khẩu -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/password_label"
                     android:textColor="@color/text_primary"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <!-- Ô nhập Mật khẩu -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilPassword"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxCornerRadiusBottomEnd="12dp"
-                    app:boxCornerRadiusBottomStart="12dp"
-                    app:boxCornerRadiusTopEnd="12dp"
-                    app:boxCornerRadiusTopStart="12dp"
-                    app:boxStrokeColor="@color/primary_teal"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxStrokeColor="@color/primary_brand"
                     app:endIconMode="password_toggle"
                     app:hintEnabled="false"
                     app:startIconDrawable="@drawable/ic_lock"
-                    app:startIconTint="@color/primary_teal">
+                    app:startIconTint="@color/primary_brand">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPassword"
@@ -141,19 +140,22 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/password_hint"
                         android:inputType="textPassword"
-                        android:paddingTop="14dp"
-                        android:paddingBottom="14dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
                         android:textColor="@color/text_primary"
                         android:textSize="15sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Thông báo lỗi -->
+                <!-- 3. Thông báo lỗi (TextView chữ đỏ nổi bật) -->
                 <TextView
                     android:id="@+id/tvErrorMessage"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#15EF4444"
                     android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:text="@string/error_invalid_credentials"
                     android:textColor="@color/text_error"
                     android:textSize="13sp"
@@ -164,13 +166,13 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Nút Đăng nhập -->
+        <!-- 4. Nút Đăng nhập dạng Pill Gradient -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:backgroundTint="@color/primary_teal"
-            android:elevation="4dp"
+            android:backgroundTint="@color/primary_brand"
+            android:elevation="6dp"
             android:text="@string/login_button"
             android:textAllCaps="false"
             android:textColor="@color/text_white"
@@ -178,15 +180,26 @@
             android:textStyle="bold"
             app:cornerRadius="28dp" />
 
-        <!-- Gợi ý tài khoản mẫu -->
-        <TextView
-            android:id="@+id/tvDemoAccount"
+        <!-- Badge gợi ý tài khoản mẫu cực kỳ thanh lịch -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/login_demo_account"
-            android:textColor="@color/text_secondary"
-            android:textSize="13sp" />
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_badge_work"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvDemoAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_demo_account"
+                android:textColor="@color/primary_brand"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

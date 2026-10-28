@@ -30,16 +30,16 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
     private List<Contact> displayList;
     private final OnContactClickListener listener;
 
-    // Bảng màu avatar phong phú, hiện đại
+    // Bảng màu avatar phong cách hiện đại (Indigo, Violet, Rose, Emerald, Amber, Cyan)
     private static final int[] AVATAR_COLORS = {
-            Color.parseColor("#00897B"), // Teal
-            Color.parseColor("#1E88E5"), // Blue
-            Color.parseColor("#7C4DFF"), // Purple
-            Color.parseColor("#FB8C00"), // Orange
-            Color.parseColor("#E53935"), // Red
-            Color.parseColor("#43A047"), // Green
-            Color.parseColor("#D81B60"), // Pink
-            Color.parseColor("#3949AB")  // Indigo
+            Color.parseColor("#4F46E5"), // Royal Indigo
+            Color.parseColor("#7C3AED"), // Electric Violet
+            Color.parseColor("#F43F5E"), // Rose
+            Color.parseColor("#10B981"), // Emerald
+            Color.parseColor("#F59E0B"), // Amber
+            Color.parseColor("#06B6D4"), // Cyan
+            Color.parseColor("#2563EB"), // Blue
+            Color.parseColor("#0D9488")  // Teal
     };
 
     public ContactAdapter(Context context, List<Contact> contactList, OnContactClickListener listener) {
@@ -112,7 +112,6 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         // Sự kiện click vào item
         holder.cardContact.setOnClickListener(v -> {
             if (listener != null) {
-                // Tìm vị trí thực tế trong originalList
                 int originalIndex = originalList.indexOf(contact);
                 listener.onContactClick(contact, originalIndex >= 0 ? originalIndex : holder.getAdapterPosition());
             }
