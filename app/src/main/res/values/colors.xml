@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand / Primary Colors -->
+    <color name="primary_teal">#00695C</color>
+    <color name="primary_teal_dark">#004D40</color>
+    <color name="primary_teal_medium">#00897B</color>
+    <color name="primary_teal_light">#E0F2F1</color>
+    <color name="teal_100">#B2DFDB</color>
+    <color name="teal_50">#E0F2F1</color>
+
+    <!-- Accent / Action Colors -->
+    <color name="accent_orange">#FF7043</color>
+    <color name="gold_star">#F59E0B</color>
+    <color name="gold_star_light">#FEF3C7</color>
+    <color name="call_green">#00796B</color>
+    <color name="call_green_pressed">#004D40</color>
+    <color name="delete_red">#D32F2F</color>
+    <color name="delete_red_pressed">#B71C1C</color>
+    <color name="delete_red_light">#FEE2E2</color>
+
+    <!-- Neutrals & Backgrounds -->
+    <color name="window_background">#F4F7F6</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_stroke">#E2E8F0</color>
+    <color name="divider">#ECEFF1</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_hint">#94A3B8</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_error">#DC2626</color>
+
+    <!-- Group Badges -->
+    <color name="group_family_bg">#FEE2E2</color>
+    <color name="group_family_text">#B91C1C</color>
+    <color name="group_friends_bg">#E0F2FE</color>
+    <color name="group_friends_text">#0369A1</color>
+    <color name="group_work_bg">#EDE9FE</color>
+    <color name="group_work_text">#6D28D9</color>
+    <color name="group_other_bg">#F1F5F9</color>
+    <color name="group_other_text">#475569</color>
+
+    <!-- Avatar Palette -->
+    <color name="avatar_teal">#00897B</color>
+    <color name="avatar_blue">#1E88E5</color>
+    <color name="avatar_purple">#7C4DFF</color>
+    <color name="avatar_orange">#FB8C00</color>
+    <color name="avatar_red">#E53935</color>
+    <color name="avatar_green">#43A047</color>
+    <color name="avatar_pink">#D81B60</color>
+    <color name="avatar_indigo">#3949AB</color>
+</resources>

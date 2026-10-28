@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="@color/card_stroke" />
+            <solid android:color="@color/card_background" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <item
+        android:gravity="center_vertical|end"
+        android:right="14dp">
+        <vector
+            android:width="20dp"
+            android:height="20dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="@color/text_secondary"
+                android:pathData="M7,10l5,5 5,-5z" />
+        </vector>
+    </item>
+</layer-list>
